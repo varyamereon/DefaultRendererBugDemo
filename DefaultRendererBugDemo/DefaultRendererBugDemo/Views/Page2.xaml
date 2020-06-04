@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="DefaultRendererBugDemo.Views.Page2"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:DefaultRendererBugDemo.ViewModels"
+             Title="Page 2"
+             x:DataType="viewModels:Page2ViewModel"
+             mc:Ignorable="d">
+
+    <ContentPage.BindingContext>
+        <viewModels:Page2ViewModel />
+    </ContentPage.BindingContext>
+
+    <!--<Label Text="If this label is set as the content of Page 2 then the bug does not appear."
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />-->
+
+    <CollectionView ItemsSource="{Binding Books}"
+                    Style="{StaticResource CollectionView}">
+
+        <!--<CollectionView.EmptyView>
+
+            <Grid>
+
+                <Label Text="Empty"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+            </Grid>
+
+        </CollectionView.EmptyView>-->
+
+    </CollectionView>
+
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application x:Class="DefaultRendererBugDemo.App"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:models="clr-namespace:DefaultRendererBugDemo.Models"
+             mc:Ignorable="d">
+
+    <Application.Resources>
+
+        <Style x:Key="CollectionView"
+               TargetType="CollectionView">
+
+            <Setter Property="EmptyView">
+
+                <Grid>
+
+                    <Label Text="Empty"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+
+                </Grid>
+
+            </Setter>
+
+        </Style>
+
+    </Application.Resources>
+
+</Application>
